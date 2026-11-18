@@ -39,4 +39,5 @@
 ## 범위 밖과 나중에
 
 - 걷는 길 안내를 AR 화살표로 그리지 않는다.
+- 5 GHz 에서만 보이는 기기는 AR 표시가 없다. 지금 패널은 그 기기의 위치를 재지 않는다 (001 FR-9). 재면 엉뚱한 자리가 높은 확률을 달고 나오기 때문이다 ([다른 방법 검토](https://github.com/DeteCam/receiver/blob/main/docs/%EB%8B%A4%EB%A5%B8%20%EB%B0%A9%EB%B2%95%20%EA%B2%80%ED%86%A0.md#56-%EC%A7%80%EA%B8%88-%ED%8C%90%EC%9C%BC%EB%A1%9C-5-ghz-%EB%A5%BC-%EC%9E%AC%EB%A9%B4-%EB%A7%89%EB%8A%94%EB%8B%A4) 5.6절).
 - **렌즈 반사 찾기 (나중에).** 후보 자리 가까이에서 폰 손전등을 켜고 카메라 화면에서 렌즈의 되반사(작은 빛점)를 찾는 화면. 전파를 내지 않는 카메라에도 쓸 수 있다 (LAPD, SenSys 2021 의 생각). 패널이 좁혀 준 자리 둘레만 보면 되므로 마지막 1 m 를 돕는다. SD 카드에 녹화만 하는 카메라([작품 범위](https://github.com/DeteCam/receiver/blob/main/docs/%EC%9E%91%ED%92%88%20%EB%B2%94%EC%9C%84.md)의 범위 밖)를 나중에 이것으로 보완한다.
