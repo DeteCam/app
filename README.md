@@ -25,7 +25,9 @@
 
 ## 지금 상태
 
-스펙 단계다. 코드는 아직 없다. 수신기와 주고받는 주소는 [주소 계약](docs/주소%20계약.md)에 정했고, 허브 쪽은 receiver 스펙 006 에서 이 표에 맞춘다. 데모에서 무엇을 보일지는 receiver 의 [데모 환경](https://github.com/DeteCam/receiver/blob/main/docs/%EB%8D%B0%EB%AA%A8%20%ED%99%98%EA%B2%BD.md)에 있다.
+스펙 단계다. 코드는 아직 없다. 수신기와 주고받는 주소는 [주소 계약](docs/주소%20계약.md)에 정했고, 허브 쪽은 receiver 스펙 006 에서 이 표에 맞춘다.
+
+범위(2026-11-18): AR 표시는 시험장과 숙소 모두에서 쓴다. 사진을 간간이 보내는 카메라와 영상을 실시간으로 보내는 카메라를 모두 다룬다. AR 화면은 녹화하지 않는다. 휴대폰 송신 경보는 권장이다 ([작품 범위](https://github.com/DeteCam/receiver/blob/main/docs/%EC%9E%91%ED%92%88%20%EB%B2%94%EC%9C%84.md)).데모에서 무엇을 보일지는 receiver 의 [데모 환경](https://github.com/DeteCam/receiver/blob/main/docs/%EB%8D%B0%EB%AA%A8%20%ED%99%98%EA%B2%BD.md)에 있다.
 
 ## 폴더
 
