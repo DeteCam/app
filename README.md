@@ -1,43 +1,14 @@
-<div align="center">
+# DeteCam 5.0 (Palm-12) — 안드로이드 AR 앱 저장소
 
-# 📱 DeteCam 앱
+> 스마트폰 하나로 **20초 벽면 최적 배치 안내(AR-OPA)** → **3초 상호 전파 교정(Auto-Verify)** → **3단계 카메라 판별** → **RAPS 90% 신뢰 AR 구역 표시**까지 제어하는 앱 스펙 및 API 계약 저장소입니다.
 
-**수신기를 조종하고, 카메라가 있을 만한 자리를 AR 로 보여 주는 안드로이드 앱**
+## 주요 기능 (v5.0 Palm-12 기준)
+1. **AR-OPA 벽면 배치 & 각도 클릭 안내**: ARCore로 방 4벽·거울·칠판·사물함을 10초 스캔하면, 손 닿는 벽면(`1.1 m / 2.0 m`) 3곳과 **좌우 Pan(`±30°`) · 상하 Tilt(`0°/-15°/-25°`) 클릭 칸수**를 AR 화살표로 띄웁니다.
+2. **Auto-Verify 3초 자동 검증**: 3기 부착 직후 상호 전파를 쏴 벽 속 숨은 철근·배관 반사가 있으면 *"노드 2번 옆으로 40 cm 이동"*을 즉시 안내합니다.
+3. **2.4 · 5 GHz 전 대역 Wi-Fi 위치 + LTE/5G·BLE 구역 경보**: `Palm-12` 통합 RF 보드로 2.4/5 GHz 모두 동일 기준으로 3D 위치 추정하며, `AD8317×3` LTE/5G 버스트 최근접 노드와 무료 BLE 구역 경보를 함께 표시합니다.
+4. **정직한 한계 표기 (`constitution.md` 원칙 3)**: 결과는 '확정'이 아닌 의심 점수·90% AR 구역으로 표시하며, 비송출(SD 단독) 카메라는 범위 밖임을 앱 화면에 명시합니다.
 
-![Android](https://img.shields.io/badge/Android-8.0+-3DDC84?style=flat-square&logo=android&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
-![Compose](https://img.shields.io/badge/Jetpack_Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)
-![ARCore](https://img.shields.io/badge/ARCore-FF6F00?style=flat-square&logo=google&logoColor=white)
-![상태](https://img.shields.io/badge/상태-스펙-19C2B0?style=flat-square)
-
-</div>
-
-## 하는 일
-
-| | |
-|---|---|
-| 🎛️ **조종** | 수신기(허브)의 Wi-Fi 에 붙어 찾기를 시키고, 의심 기기와 그 까닭을 보여 준다. 다음 할 일을 한 줄로 알려 준다 |
-| 🧭 **패널 자리 등록** | 패널 앞덮개의 AR 마커를 비춰, 패널이 방 어디에 어느 쪽을 보고 걸렸는지 알아낸다 |
-| 🗺️ **자리표 · 방 훑기** | 교실은 첫 자리와 끝 자리를 찍어 자리표를 만들고, 방은 벽과 천장을 훑어 겉면을 잡는다 |
-| 🫧 **AR 표시** | 의심 자리 세 곳을 확률과 함께 폰 화면 속 방 위에 겹쳐 그린다. 교실은 책상 위에, 방은 벽·천장의 점에 |
-
-![시스템 구성도](https://raw.githubusercontent.com/DeteCam/receiver/main/docs/images/%EC%84%A4%EA%B3%84%EB%8F%84_%EC%8B%9C%EC%8A%A4%ED%85%9C_%EA%B5%AC%EC%84%B1.png)
-
-## 지금 상태
-
-스펙 단계다. 코드는 아직 없다. 수신기와 주고받는 주소는 [주소 계약](docs/주소%20계약.md)에 정했고, 허브 쪽은 receiver 스펙 006 에서 이 표에 맞춘다.
-
-범위(2026-11-18): AR 표시는 시험장과 숙소 모두에서 쓴다. 사진을 간간이 보내는 카메라와 영상을 실시간으로 보내는 카메라를 모두 다룬다. AR 화면은 녹화하지 않는다. 휴대폰 송신 경보는 권장이다 ([작품 범위](https://github.com/DeteCam/receiver/blob/main/docs/%EC%9E%91%ED%92%88%20%EB%B2%94%EC%9C%84.md)).데모에서 무엇을 보일지는 receiver 의 [데모 환경](https://github.com/DeteCam/receiver/blob/main/docs/%EB%8D%B0%EB%AA%A8%20%ED%99%98%EA%B2%BD.md)에 있다.
-
-## 폴더
-
-```
-specs/     스펙: 001 수신기 조종, 002 AR 표시
-docs/      앱 문서 (주소 계약)
-app/       안드로이드 프로젝트 (구현 단계에서 추가)
-```
-
-## 관련
-
-- 일하는 규칙: [CONTRIBUTING](https://github.com/DeteCam/.github/blob/main/CONTRIBUTING.md)
-- 시스템 전체: [docs](https://github.com/DeteCam/docs) · 수신기의 설계도: [receiver](https://github.com/DeteCam/receiver/blob/main/docs/%EC%84%A4%EA%B3%84%EB%8F%84.md)
+## 문서 & 스펙
+- 🔌 **[앱 ↔ 수신기 주소 계약 (API 기준)](docs/주소%20계약.md)**
+- 📋 [스펙 001: 수신기 제어 & 카메라 판별](specs/001-receiver-control/spec.md)
+- 📋 [스펙 002: 벽면 스위블 AR-OPA & RAPS 90% AR 표시](specs/002-ar-opa-and-display/spec.md)
